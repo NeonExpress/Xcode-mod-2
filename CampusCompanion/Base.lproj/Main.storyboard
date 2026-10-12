@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CampusCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill.and.arrow.left.and.arrow.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hc9-Te-U9Y">
+                                <rect key="frame" x="121.66666666666669" y="223" width="150" height="146.66666666666669"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="8iQ-ob-dWw"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="YJg-aj-vpT"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="b8k-nn-Xu8"/>
+                                    <constraint firstAttribute="width" constant="150" id="cln-En-AUb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campus Companion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qtu-Y6-4IF">
+                                <rect key="frame" x="20" y="119" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Campus, In Your Pocket" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zC-az-U8C">
+                                <rect key="frame" x="20" y="161" width="353" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRp-hA-qOB">
+                                <rect key="frame" x="140.66666666666666" y="395" width="112" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Get Started"/>
+                                <connections>
+                                    <action selector="getStartedTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="69X-co-vOA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7zC-az-U8C" firstAttribute="top" secondItem="Qtu-Y6-4IF" secondAttribute="bottom" constant="8" id="A1H-q1-E04"/>
+                            <constraint firstItem="cRp-hA-qOB" firstAttribute="top" secondItem="Hc9-Te-U9Y" secondAttribute="bottom" constant="24" id="A7n-g5-ROU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7zC-az-U8C" secondAttribute="trailing" constant="20" id="G9U-Fy-HGC"/>
+                            <constraint firstItem="Hc9-Te-U9Y" firstAttribute="top" secondItem="7zC-az-U8C" secondAttribute="bottom" constant="40" id="Iaw-SS-kj1"/>
+                            <constraint firstItem="Hc9-Te-U9Y" firstAttribute="top" secondItem="7zC-az-U8C" secondAttribute="bottom" constant="40" id="KhD-S7-MoC"/>
+                            <constraint firstItem="cRp-hA-qOB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U96-tb-cep"/>
+                            <constraint firstItem="Hc9-Te-U9Y" firstAttribute="top" secondItem="7zC-az-U8C" secondAttribute="bottom" constant="40" id="UXL-Qf-a6M"/>
+                            <constraint firstItem="Qtu-Y6-4IF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="awH-ER-ACH"/>
+                            <constraint firstItem="7zC-az-U8C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eKb-cL-2Qf"/>
+                            <constraint firstItem="Hc9-Te-U9Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nl2-l4-YBD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qtu-Y6-4IF" secondAttribute="trailing" constant="20" id="qM5-Os-MUQ"/>
+                            <constraint firstItem="Qtu-Y6-4IF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tey-cN-Asf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="subtitleLabel" destination="7zC-az-U8C" id="YQk-Vw-ATD"/>
+                        <outlet property="titleLabel" destination="Qtu-Y6-4IF" id="HXi-VB-C66"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74.045801526717554" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.fill.and.arrow.left.and.arrow.right" catalog="system" width="128" height="85"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
