@@ -1,80 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nav-001">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="nav-scene">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CampusCompanion" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController id="nav-001" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-bar">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="welcome-001" kind="relationship" relationship="rootViewController" id="nav-root"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nav-first" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="51" y="-655"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="welcome-scene">
+            <objects>
+                <viewController id="welcome-001" customClass="ViewController" customModule="CampusCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="welcome-view">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill.and.arrow.left.and.arrow.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hc9-Te-U9Y">
-                                <rect key="frame" x="121.66666666666669" y="223" width="150" height="146.66666666666669"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="figure.hiking" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="welcome-image">
+                                <rect key="frame" x="121.66666666666669" y="211.66666666666663" width="150" height="121.33333333333337"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="8iQ-ob-dWw"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="YJg-aj-vpT"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="b8k-nn-Xu8"/>
-                                    <constraint firstAttribute="width" constant="150" id="cln-En-AUb"/>
+                                    <constraint firstAttribute="height" constant="120" id="image-height"/>
+                                    <constraint firstAttribute="width" constant="150" id="image-width"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campus Companion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qtu-Y6-4IF">
-                                <rect key="frame" x="20" y="119" width="353" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Campus Companion" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="welcome-title">
+                                <rect key="frame" x="20" y="352" width="353" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Campus, In Your Pocket" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zC-az-U8C">
-                                <rect key="frame" x="20" y="161" width="353" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Your Campus, In Your Pocket" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="welcome-subtitle">
+                                <rect key="frame" x="20" y="394" width="353" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRp-hA-qOB">
-                                <rect key="frame" x="140.66666666666666" y="395" width="112" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Get Started"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" translatesAutoresizingMaskIntoConstraints="NO" id="name-field">
+                                <rect key="frame" x="32" y="438" width="329" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Notify me about events" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="notify-label">
+                                <rect key="frame" x="32" y="488" width="177" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="notify-switch">
+                                <rect key="frame" x="300" y="484" width="63" height="28"/>
+                            </switch>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="role-segment">
+                                <rect key="frame" x="32" y="524" width="329" height="32"/>
+                                <segments>
+                                    <segment title="Student"/>
+                                    <segment title="Faculty"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Event Date" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="date-label">
+                                <rect key="frame" x="32" y="571" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </label>
+                            <datePicker opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" translatesAutoresizingMaskIntoConstraints="NO" id="event-date">
+                                <rect key="frame" x="259" y="563.66666666666663" width="102" height="36"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Guests: 1" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guest-label">
+                                <rect key="frame" x="32" y="608" width="70" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="guest-stepper">
+                                <rect key="frame" x="267" y="602" width="94" height="32"/>
                                 <connections>
-                                    <action selector="getStartedTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="69X-co-vOA"/>
+                                    <action selector="guestStepperChanged:" destination="welcome-001" eventType="valueChanged" id="guest-action"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="explore-button">
+                                <rect key="frame" x="122.66666666666669" y="652" width="148" height="35"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Explore Campus"/>
+                                <connections>
+                                    <action selector="exploreButtonTapped:" destination="welcome-001" eventType="touchUpInside" id="explore-action"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="welcome-safe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7zC-az-U8C" firstAttribute="top" secondItem="Qtu-Y6-4IF" secondAttribute="bottom" constant="8" id="A1H-q1-E04"/>
-                            <constraint firstItem="cRp-hA-qOB" firstAttribute="top" secondItem="Hc9-Te-U9Y" secondAttribute="bottom" constant="24" id="A7n-g5-ROU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7zC-az-U8C" secondAttribute="trailing" constant="20" id="G9U-Fy-HGC"/>
-                            <constraint firstItem="Hc9-Te-U9Y" firstAttribute="top" secondItem="7zC-az-U8C" secondAttribute="bottom" constant="40" id="Iaw-SS-kj1"/>
-                            <constraint firstItem="Hc9-Te-U9Y" firstAttribute="top" secondItem="7zC-az-U8C" secondAttribute="bottom" constant="40" id="KhD-S7-MoC"/>
-                            <constraint firstItem="cRp-hA-qOB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U96-tb-cep"/>
-                            <constraint firstItem="Hc9-Te-U9Y" firstAttribute="top" secondItem="7zC-az-U8C" secondAttribute="bottom" constant="40" id="UXL-Qf-a6M"/>
-                            <constraint firstItem="Qtu-Y6-4IF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="awH-ER-ACH"/>
-                            <constraint firstItem="7zC-az-U8C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eKb-cL-2Qf"/>
-                            <constraint firstItem="Hc9-Te-U9Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nl2-l4-YBD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qtu-Y6-4IF" secondAttribute="trailing" constant="20" id="qM5-Os-MUQ"/>
-                            <constraint firstItem="Qtu-Y6-4IF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tey-cN-Asf"/>
+                            <constraint firstItem="welcome-image" firstAttribute="top" secondItem="welcome-safe" secondAttribute="top" constant="40" id="c1"/>
+                            <constraint firstItem="name-field" firstAttribute="leading" secondItem="welcome-safe" secondAttribute="leading" constant="32" id="c10"/>
+                            <constraint firstItem="name-field" firstAttribute="trailing" secondItem="welcome-safe" secondAttribute="trailing" constant="-32" id="c11"/>
+                            <constraint firstItem="notify-label" firstAttribute="top" secondItem="name-field" secondAttribute="bottom" constant="16" id="c12"/>
+                            <constraint firstItem="notify-label" firstAttribute="leading" secondItem="name-field" secondAttribute="leading" id="c13"/>
+                            <constraint firstItem="notify-switch" firstAttribute="centerY" secondItem="notify-label" secondAttribute="centerY" id="c14"/>
+                            <constraint firstItem="notify-switch" firstAttribute="trailing" secondItem="name-field" secondAttribute="trailing" id="c15"/>
+                            <constraint firstItem="role-segment" firstAttribute="top" secondItem="notify-label" secondAttribute="bottom" constant="16" id="c16"/>
+                            <constraint firstItem="role-segment" firstAttribute="leading" secondItem="name-field" secondAttribute="leading" id="c17"/>
+                            <constraint firstItem="role-segment" firstAttribute="trailing" secondItem="name-field" secondAttribute="trailing" id="c18"/>
+                            <constraint firstItem="date-label" firstAttribute="top" secondItem="role-segment" secondAttribute="bottom" constant="16" id="c19"/>
+                            <constraint firstItem="welcome-image" firstAttribute="centerX" secondItem="welcome-safe" secondAttribute="centerX" id="c2"/>
+                            <constraint firstItem="date-label" firstAttribute="leading" secondItem="name-field" secondAttribute="leading" id="c20"/>
+                            <constraint firstItem="event-date" firstAttribute="centerY" secondItem="date-label" secondAttribute="centerY" id="c21"/>
+                            <constraint firstItem="event-date" firstAttribute="trailing" secondItem="name-field" secondAttribute="trailing" id="c22"/>
+                            <constraint firstItem="guest-label" firstAttribute="top" secondItem="date-label" secondAttribute="bottom" constant="16" id="c23"/>
+                            <constraint firstItem="guest-label" firstAttribute="leading" secondItem="name-field" secondAttribute="leading" id="c24"/>
+                            <constraint firstItem="guest-stepper" firstAttribute="centerY" secondItem="guest-label" secondAttribute="centerY" id="c25"/>
+                            <constraint firstItem="guest-stepper" firstAttribute="trailing" secondItem="name-field" secondAttribute="trailing" id="c26"/>
+                            <constraint firstItem="explore-button" firstAttribute="top" secondItem="guest-label" secondAttribute="bottom" constant="24" id="c27"/>
+                            <constraint firstItem="explore-button" firstAttribute="centerX" secondItem="welcome-safe" secondAttribute="centerX" id="c28"/>
+                            <constraint firstItem="welcome-title" firstAttribute="top" secondItem="welcome-image" secondAttribute="bottom" constant="20" id="c3"/>
+                            <constraint firstItem="welcome-title" firstAttribute="leading" secondItem="welcome-safe" secondAttribute="leading" constant="20" id="c4"/>
+                            <constraint firstItem="welcome-title" firstAttribute="trailing" secondItem="welcome-safe" secondAttribute="trailing" constant="-20" id="c5"/>
+                            <constraint firstItem="welcome-subtitle" firstAttribute="top" secondItem="welcome-title" secondAttribute="bottom" constant="8" id="c6"/>
+                            <constraint firstItem="welcome-subtitle" firstAttribute="leading" secondItem="welcome-safe" secondAttribute="leading" constant="20" id="c7"/>
+                            <constraint firstItem="welcome-subtitle" firstAttribute="trailing" secondItem="welcome-safe" secondAttribute="trailing" constant="-20" id="c8"/>
+                            <constraint firstItem="name-field" firstAttribute="top" secondItem="welcome-subtitle" secondAttribute="bottom" constant="24" id="c9"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="subtitleLabel" destination="7zC-az-U8C" id="YQk-Vw-ATD"/>
-                        <outlet property="titleLabel" destination="Qtu-Y6-4IF" id="HXi-VB-C66"/>
+                        <outlet property="eventDatePicker" destination="event-date" id="out-date"/>
+                        <outlet property="guestCountLabel" destination="guest-label" id="out-guest-label"/>
+                        <outlet property="guestStepper" destination="guest-stepper" id="out-stepper"/>
+                        <outlet property="nameTextField" destination="name-field" id="out-name"/>
+                        <outlet property="notifySwitch" destination="notify-switch" id="out-switch"/>
+                        <outlet property="roleSegmentedControl" destination="role-segment" id="out-role"/>
+                        <outlet property="subtitleLabel" destination="welcome-subtitle" id="out-subtitle"/>
+                        <outlet property="titleLabel" destination="welcome-title" id="out-title"/>
+                        <segue destination="detail-001" kind="show" identifier="ShowDetailSegue" id="detail-segue"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="welcome-first" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74.045801526717554" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="51" y="22"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="detail-scene">
+            <objects>
+                <viewController id="detail-001" customClass="DetailViewController" customModule="CampusCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="detail-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="message-label">
+                                <rect key="frame" x="32" y="478" width="329" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="detail-safe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="message-label" firstAttribute="centerX" secondItem="detail-safe" secondAttribute="centerX" id="d1"/>
+                            <constraint firstItem="message-label" firstAttribute="centerY" secondItem="detail-safe" secondAttribute="centerY" id="d2"/>
+                            <constraint firstItem="message-label" firstAttribute="leading" secondItem="detail-safe" secondAttribute="leading" constant="32" id="d3"/>
+                            <constraint firstItem="message-label" firstAttribute="trailing" secondItem="detail-safe" secondAttribute="trailing" constant="-32" id="d4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="message-label" id="out-message"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="detail-first" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720" y="-98"/>
         </scene>
     </scenes>
     <resources>
-        <image name="person.fill.and.arrow.left.and.arrow.right" catalog="system" width="128" height="85"/>
+        <image name="figure.hiking" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
